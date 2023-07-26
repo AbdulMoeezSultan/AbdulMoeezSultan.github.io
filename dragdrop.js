@@ -18,6 +18,13 @@ function onDragStart(event) {
     if (typeof TheDragTaskId === 'string') {
         TheDragTaskId = Number(TheDragTaskId);
     }
+    myDiv1.style.display = 'none';
+    myDiv2.style.display = 'none';
+    myDiv2.style.display = 'none';
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 function onDragOverNext(event) {
