@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="Header">
+        <div id="Heading">My Tasks</div>
+        <div>
+            <button id="AddLabelForm">+</button>
+        </div>
+
+
+    </header>
+    <section id="Main">
+        <div id="CreateLabel">
+            <div>
+                <p id="C-L">Create Label</p>
+            </div>
+
+            <form id="Form2">
+                <div class="FormElement">
+                    <label for="Label">New Label:</label>
+                    <input type="text" id="Label">
+                </div>
+            </form>
+
+            <div id="NotSubmit2">
+                <p>Label cannot be empty</p>
+            </div>
+            <div id="NotSubmit3">
+                <p>Label exist already</p>
+            </div>
+
+            <button id="SubmitLabel" onclick="CreateLabel()">Create</button>
+        </div>
+
+        <div id="CreateTask">
+            <div>
+                <p id="A-T">Add Task</p>
+                <p id="U-T">Update Task</p>
+            </div>
+
+            <form id="Form">
+                <div class="FormElement">
+                    <label for="Task">To Do:</label>
+                    <input type="text" id="Task">
+                </div>
+
+                <div class="FormElement">
+                    <label for="DueDate">Due Date:</label>
+                    <input type="date" id="DueDate">
+                </div>
+
+                <div class="FormElement">
+                    <label for="Description">Description:</label>
+                    <input type="text" id="Description">
+                </div>
+            </form>
+
+            <div id="NotSubmit">
+                <p>The form is not filled properly</p>
+            </div>
+
+            <button id="SubmitAdd" onclick="AddTheTask()">Add</button>
+            <button id="SubmitUpdate" onclick="UpdateTheTask()">Update</button>
+        </div>
+        <div id="MoveTaskForm">
+            <div>
+                <p id="M-T">Move Task</p>
+            </div>
+
+            <form id="Form3">
+                <div class="FormElement">
+                    <label for="DropDown">Select an attribute:</label>
+                    <select id="DropDown"></select>
+                </div>
+            </form>
+            <button id="SubmitMove" onclick="MoveTheTask()">Move</button>
+        </div>
+
+        <div id="LeftRightLabel">
+            <div class="LeftRightLabelPosition">
+                <button id="MoveLeft" ondragover="onDragOverPrevious(event);" onclick="PreviousLabel()">◄ Previous Label</button>
+            </div>
+            <div class="LeftRightLabelPosition">
+                <button id="MoveRight" ondragover="onDragOverNext(event);" onclick="NextLabel()">Next Label ►</button>
+            </div>
+        </div>
+        <div id="MyLabels">
+
+        </div>
+    </section>
+    <script src="toggle1.js"></script>
+    <script src="toggle2andpost.js"></script>
+    <script src="createlabel.js"></script>
+    <script src="showlabel.js"></script>
+    <script src="dellabel.js"></script>
+    <script src="get.js"></script>
+    <script src="delete.js"></script>
+    <script src="updatetask.js"></script>
+    <script src="rightleft.js"></script>
+    <script src="move.js"></script>
+    <script src="dragdrop.js"></script>
+</body>
+
+</html>
