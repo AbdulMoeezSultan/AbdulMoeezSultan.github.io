@@ -5,7 +5,6 @@ function AddTheTaskForm(e) {
     top: 0,
     behavior: 'smooth'
   });
-
   var hidemessage = document.getElementById("NotSubmit");
   myDiv1.style.display = 'none';
   myDiv2.style.display = 'block';
